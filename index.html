@@ -21,11 +21,26 @@
         <nav class="navbar">
             <a href="#home" class="logo">JOREL REIS</a>
 
-            <ul class="nav-links">
-                <li><a href="#projects">Work</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div class="nav-right">
+                <div class="navbar-actions">
+                    <button class="translate-btn" id="languageToggle" type="button" aria-label="Translate page">
+                        <span class="translate-icon">文</span>
+                        <span class="translate-label">PT</span>
+                    </button>
+
+                    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
+                        <span>🌙</span>
+                        <span>☀️</span>
+                    </button>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="#projects" data-i18n="nav_work">Work</a></li>
+                    <li><a href="#about" data-i18n="nav_about">About</a></li>
+                    <li><a href="#certificates" data-i18n="nav_certificates">Certificates</a></li>
+                    <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -33,25 +48,33 @@
 
         <section id="home" class="hero section">
             <div class="hero-content">
-                <h1>
+                <h1 data-i18n-html="hero_title">
                     HI, I AM <br />
                     JOREL REIS.
                 </h1>
 
-                <p>
+                <p data-i18n="hero_description">
                     I create web interfaces, automations and digital solutions using
                     HTML, CSS, JavaScript, React, Node.js and Python.
                 </p>
 
                 <div class="hero-actions">
-                    <a href="#contact" class="btn-primary">Contact Me</a>
+                    <a href="#contact" class="btn-primary" data-i18n="contact_me">Contact Me</a>
 
-                    <a href="https://www.linkedin.com/in/jorelreis/" target="_blank" class="icon-btn">
-                        in
+                    <a href="https://www.linkedin.com/in/jorelreis/" target="_blank" rel="noopener noreferrer"
+                        class="icon-btn" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
+                        </svg>
                     </a>
 
-                    <a href="https://github.com/JorelReis" target="_blank" class="icon-btn">
-                        GH
+                    <a href="https://github.com/JorelReis" target="_blank" rel="noopener noreferrer" class="icon-btn"
+                        aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.207 11.387.6.111.793-.261.793-.577 0-.285-.01-1.04-.016-2.04-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.746.083-.731.083-.731 1.205.085 1.84 1.238 1.84 1.238 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.605-2.665-.303-5.466-1.333-5.466-5.933 0-1.31.468-2.381 1.235-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23A11.52 11.52 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.654 1.653.243 2.873.12 3.176.77.84 1.233 1.911 1.233 3.221 0 4.61-2.805 5.626-5.478 5.922.43.37.813 1.102.813 2.222 0 1.604-.015 2.896-.015 3.286 0 .319.19.694.8.576C20.565 21.796 24 17.297 24 12c0-6.63-5.373-12-12-12z" />
+                        </svg>
                     </a>
                 </div>
             </div>
@@ -63,8 +86,8 @@
 
         <section id="projects" class="projects section">
             <div class="section-heading">
-                <h2>FEATURED PROJECTS</h2>
-                <p>
+                <h2 data-i18n="projects_title">FEATURED PROJECTS</h2>
+                <p data-i18n="projects_description">
                     Here are some projects that represent my journey in web development,
                     automation and interactive digital experiences.
                 </p>
@@ -77,9 +100,9 @@
                 </div>
 
                 <div class="project-info">
-                    <h3>Shopping Cart & Checkout System</h3>
+                    <h3 data-i18n="project_1_title">Shopping Cart & Checkout System</h3>
 
-                    <p>
+                    <p data-i18n="project_1_description">
                         A full-stack shopping cart application built to simulate an online
                         store experience, including product listing, cart management, item
                         quantity control and a checkout flow with real-time payment simulation.
@@ -87,24 +110,24 @@
 
                     <div class="project-details">
                         <div>
-                            <strong>Technologies</strong>
+                            <strong data-i18n="technologies_label">Technologies</strong>
                             <span>React, Node.js, Express, Axios, WebSocket, RabbitMQ, Docker</span>
                         </div>
 
                         <div>
-                            <strong>Year</strong>
+                            <strong data-i18n="year_label">Year</strong>
                             <span>2025</span>
                         </div>
 
                         <div>
-                            <strong>Role</strong>
+                            <strong data-i18n="role_label">Role</strong>
                             <span>Full-stack Developer</span>
                         </div>
                     </div>
 
                     <div class="project-links">
                         <a href="https://github.com/JorelReis/Shopee-cart" target="_blank">
-                            View on GitHub
+                            <span data-i18n="github_button">View on GitHub</span>
                         </a>
                     </div>
                 </div>
@@ -117,34 +140,33 @@
                 </div>
 
                 <div class="project-info">
-                    <h3>AI Chat Application</h3>
+                    <h3 data-i18n="project_2_title">AI Chat Application</h3>
 
-                    <p>
+                    <p data-i18n="project_2_description">
                         An AI-powered chat application that allows users to send questions
                         and receive dynamic responses through an OpenAI API integration,
                         using a modular frontend and backend structure.
                     </p>
-
                     <div class="project-details">
                         <div>
-                            <strong>Technologies</strong>
+                            <strong data-i18n="technologies_label">Technologies</strong>
                             <span>React, Node.js, Express, Axios, OpenAI API, CSS</span>
                         </div>
 
                         <div>
-                            <strong>Year</strong>
+                            <strong data-i18n="year_label">Year</strong>
                             <span>2025</span>
                         </div>
 
                         <div>
-                            <strong>Role</strong>
+                            <strong data-i18n="role_label">Role</strong>
                             <span>AI Integration</span>
                         </div>
                     </div>
 
                     <div class="project-links">
                         <a href="https://github.com/JorelReis/chatgpt-clone" target="_blank">
-                            View on GitHub
+                            <span data-i18n="github_button">View on GitHub</span>
                         </a>
                     </div>
                 </div>
@@ -157,9 +179,9 @@
                 </div>
 
                 <div class="project-info">
-                    <h3>Pokedex Web App</h3>
+                    <h3 data-i18n="project_3_title">Pokedex Web App</h3>
 
-                    <p>
+                    <p data-i18n="project_3_description">
                         A responsive front-end application that consumes the PokéAPI to
                         display Pokémon data, including images, types, stats, pagination
                         and search by name or ID.
@@ -167,24 +189,24 @@
 
                     <div class="project-details">
                         <div>
-                            <strong>Technologies</strong>
+                            <strong data-i18n="technologies_label">Technologies</strong>
                             <span>HTML, CSS, JavaScript, PokéAPI</span>
                         </div>
 
                         <div>
-                            <strong>Year</strong>
+                            <strong data-i18n="year_label">Year</strong>
                             <span>2025</span>
                         </div>
 
                         <div>
-                            <strong>Role</strong>
+                            <strong data-i18n="role_label">Role</strong>
                             <span>Front-end Developer</span>
                         </div>
                     </div>
 
                     <div class="project-links">
                         <a href="https://github.com/JorelReis/Pokedex" target="_blank">
-                            View on GitHub
+                            <span data-i18n="github_button">View on GitHub</span>
                         </a>
                     </div>
                 </div>
@@ -192,15 +214,15 @@
         </section>
 
         <section id="about" class="about section">
-            <h2>ABOUT ME</h2>
+            <h2 data-i18n="about_title">ABOUT ME</h2>
 
             <div class="about-content">
-                <h3>
+                <h3 data-i18n="about_headline">
                     I am a developer based in Portugal, focused on building clean web
                     interfaces, automations and practical digital solutions.
                 </h3>
 
-                <p>
+                <p data-i18n="about_description">
                     My background combines technology, process analysis and creative
                     development. I have experience working with AI tools, automations,
                     web projects and interactive experiences with UEFN. Today, I am
@@ -209,25 +231,238 @@
                     problems and help me grow as a developer.
                 </p>
 
-                <a href="https://www.linkedin.com/in/jorelreis/" target="_blank">
+                <a href="https://www.linkedin.com/in/jorelreis/" target="_blank" data-i18n="linkedin_button">
                     View LinkedIn
                 </a>
             </div>
         </section>
 
+        <section id="certificates" class="certificates section">
+            <div class="section-heading">
+                <h2 data-i18n="certificates_title">CERTIFICATES</h2>
+                <p data-i18n="certificates_description">
+                    Here are some certifications and courses I have completed during my development journey.
+                </p>
+            </div>
+
+            <div class="certificates-list">
+
+                <details class="certificate-group">
+                    <summary>
+                        <span data-i18n="logic_category">LOGIC</span>
+                        <span class="arrow">↓</span>
+                    </summary>
+
+                    <ul>
+                        <li>
+                            <a href="assets/certificates/logic/algoritmos-e-logica-de-programacao-udemy.pdf"
+                                target="_blank" rel="noopener noreferrer">
+                                Algoritmos e Lógica de Programação
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="assets/certificates/logic/fundamentos-de-programacao-algoritmos-linkedin.pdf"
+                                target="_blank" rel="noopener noreferrer">
+                                Fundamentos de Programação: Algoritmos
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="assets/certificates/logic/introducao-logica-programacao-pensamento-computacional-dio.pdf"
+                                target="_blank" rel="noopener noreferrer">
+                                Introdução à Lógica de Programação e Pensamento Computacional
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="assets/certificates/logic/programacao-e-pensamento-computacional-dio.pdf"
+                                target="_blank" rel="noopener noreferrer">
+                                Programação e Pensamento Computacional
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="assets/certificates/logic/desafios-de-codigo-logica-pensamento-computacional-dio.pdf"
+                                target="_blank" rel="noopener noreferrer">
+                                Desafios de Código: Lógica e Pensamento Computacional
+                            </a>
+                        </li>
+                    </ul>
+                </details>
+
+                <details class="certificate-group">
+                    <summary>
+                        <span data-i18n="frontend_category">FRONT-END</span>
+                        <span class="arrow">↓</span>
+                    </summary>
+
+                    <ul>
+                        <li>
+                            <a href="assets/certificates/front-end/javascript-para-web-html-css-apis-dio.pdf"
+                                target="_blank" rel="noopener noreferrer">
+                                JavaScript para Web: HTML, CSS e APIs na Prática
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="assets/certificates/front-end/dominando-http-integrando-api-pokeapi-dio.pdf"
+                                target="_blank" rel="noopener noreferrer">
+                                Dominando HTTP e Integrando com a PokéAPI
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="assets/certificates/front-end/construindo-pokedex-com-javascript-dio.pdf"
+                                target="_blank" rel="noopener noreferrer">
+                                Construindo uma Pokédex com JavaScript
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="assets/certificates/front-end/introducao-desenvolvimento-web-com-javascript-dio.pdf"
+                                target="_blank" rel="noopener noreferrer">
+                                Introdução ao Desenvolvimento Web com JavaScript
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="assets/certificates/front-end/primeiros-passos-com-javascript-dio.pdf"
+                                target="_blank" rel="noopener noreferrer">
+                                Primeiros Passos com JavaScript
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="assets/certificates/front-end/arrays-estruturas-repeticao-javascript-dio.pdf"
+                                target="_blank" rel="noopener noreferrer">
+                                Arrays e Estruturas de Repetição em JavaScript
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="assets/certificates/front-end/versionamento-git-github-dio.pdf" target="_blank"
+                                rel="noopener noreferrer">
+                                Versionamento de Código com Git e GitHub
+                            </a>
+                        </li>
+                    </ul>
+                </details>
+
+                <details class="certificate-group">
+                    <summary>
+                        <span data-i18n="backend_category">BACK-END</span>
+                        <span class="arrow">↓</span>
+                    </summary>
+
+                    <ul>
+                        <li>
+                            <a href="assets/certificates/back-end/descubra-o-python-linkedin.pdf" target="_blank"
+                                rel="noopener noreferrer">
+                                Descubra o Python
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="assets/certificates/back-end/linguagem-de-programacao-python-dio.pdf"
+                                target="_blank" rel="noopener noreferrer">
+                                Conhecendo a Linguagem de Programação Python
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="assets/certificates/back-end/desenvolvimento-primeiros-passos-python-dio.pdf"
+                                target="_blank" rel="noopener noreferrer">
+                                Desenvolvimento e Primeiros Passos com Python
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="assets/certificates/back-end/fundamentos-programacao-bancos-de-dados-linkedin.pdf"
+                                target="_blank" rel="noopener noreferrer">
+                                Fundamentos de Programação: Bancos de Dados
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="assets/certificates/back-end/fundamentos-programacao-design-orientado-objetos-linkedin.pdf"
+                                target="_blank" rel="noopener noreferrer">
+                                Fundamentos de Programação: Design Orientado a Objetos
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="assets/certificates/back-end/fundamentos-programacao-teste-software-qa-linkedin.pdf"
+                                target="_blank" rel="noopener noreferrer">
+                                Fundamentos de Programação: Teste de Software e QA
+                            </a>
+                        </li>
+                    </ul>
+                </details>
+
+                <details class="certificate-group">
+                    <summary>
+                        <span data-i18n="ai_category">AI</span>
+                        <span class="arrow">↓</span>
+                    </summary>
+
+                    <ul>
+                        <li>
+                            <a href="assets/certificates/ai/principios-ia-desenvolvimento-software-dio.pdf"
+                                target="_blank" rel="noopener noreferrer">
+                                Princípios de IA e Desenvolvimento de Software
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="assets/certificates/ai/conceitos-fundamentais-ia-dio.pdf" target="_blank"
+                                rel="noopener noreferrer">
+                                Conceitos Fundamentais de IA
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="assets/certificates/ai/microsoft-azure-ai-fundamentals-dio.pdf" target="_blank"
+                                rel="noopener noreferrer">
+                                Microsoft Azure AI Fundamentals
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="assets/certificates/ai/fundamentos-machine-learning-dio.pdf" target="_blank"
+                                rel="noopener noreferrer">
+                                Fundamentos de Machine Learning
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="assets/certificates/ai/introducao-machine-learning-dio.pdf" target="_blank"
+                                rel="noopener noreferrer">
+                                Introdução ao Machine Learning
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="assets/certificates/ai/machine-learning-pratica-azure-ml-dio.pdf" target="_blank"
+                                rel="noopener noreferrer">
+                                Machine Learning na Prática no Azure ML
+                            </a>
+                        </li>
+                    </ul>
+                </details>
+
+            </div>
+        </section>
+
         <section id="contact" class="contact section">
             <div class="contact-info">
-                <h2>LET’S CONNECT</h2>
+                <h2 data-i18n="contact_title">LET’S CONNECT</h2>
 
                 <p>
-                    Say hello at
+                    <span data-i18n="contact_email_text">Say hello at</span>
                     <a href="mailto:jorel_reis@icloud.com">jorel_reis@icloud.com</a>
                 </p>
 
-                <p>
-                    For more info, here’s my
-                    <a href="#" target="_blank">resume</a>
-                </p>
 
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/jorelreis/" target="_blank">LinkedIn</a>
@@ -237,26 +472,26 @@
 
             <form class="contact-form">
                 <label>
-                    Name
+                    <span data-i18n="form_name">Name</span>
                     <input type="text" name="name" />
                 </label>
 
                 <label>
-                    Email
+                    <span data-i18n="form_email">Email</span>
                     <input type="email" name="email" />
                 </label>
 
                 <label>
-                    Subject
+                    <span data-i18n="form_subject">Subject</span>
                     <input type="text" name="subject" />
                 </label>
 
                 <label>
-                    Message
+                    <span data-i18n="form_message">Message</span>
                     <textarea name="message"></textarea>
                 </label>
 
-                <button type="submit">Submit</button>
+                <button type="submit" data-i18n="form_submit">Submit</button>
             </form>
         </section>
 
