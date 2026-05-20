@@ -460,7 +460,7 @@
 
                 <p>
                     <span data-i18n="contact_email_text">Say hello at</span>
-                    <a href="mailto:jorel_reis@icloud.com">jorel_reis@icloud.com</a>
+                    <a href="mailto:jorelreis@icloud.com">jorelreis@icloud.com</a>
                 </p>
 
 
@@ -470,26 +470,28 @@
                 </div>
             </div>
 
-            <form class="contact-form">
+            <form class="contact-form" action="https://formspree.io/f/xeedalpo" method="POST">
                 <label>
                     <span data-i18n="form_name">Name</span>
-                    <input type="text" name="name" />
+                    <input type="text" name="name" required autocomplete="name" />
                 </label>
 
                 <label>
                     <span data-i18n="form_email">Email</span>
-                    <input type="email" name="email" />
+                    <input type="email" name="email" required autocomplete="email" />
                 </label>
 
                 <label>
                     <span data-i18n="form_subject">Subject</span>
-                    <input type="text" name="subject" />
+                    <input type="text" name="subject" required />
                 </label>
 
                 <label>
                     <span data-i18n="form_message">Message</span>
-                    <textarea name="message"></textarea>
+                    <textarea name="message" required></textarea>
                 </label>
+
+                <input type="hidden" name="_subject" value="New message from Jorel Reis Portfolio" />
 
                 <button type="submit" data-i18n="form_submit">Submit</button>
             </form>

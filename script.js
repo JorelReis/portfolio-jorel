@@ -1,4 +1,3 @@
-const contactForm = document.querySelector(".contact-form");
 const themeToggle = document.getElementById("themeToggle");
 const languageToggle = document.getElementById("languageToggle");
 const languageLabel = document.querySelector(".translate-label");
@@ -171,11 +170,6 @@ languageToggle.addEventListener("click", () => {
   applyLanguage(currentLanguage);
 });
 
-contactForm.addEventListener("submit", function (event) {
-  event.preventDefault();
-
-  alert(translations[currentLanguage].form_alert);
-});
 
 applyTheme(currentTheme);
 applyLanguage(currentLanguage);
