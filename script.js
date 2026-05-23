@@ -1,6 +1,9 @@
 const themeToggle = document.getElementById("themeToggle");
 const languageToggle = document.getElementById("languageToggle");
 const languageLabel = document.querySelector(".translate-label");
+const contactForm = document.querySelector(".contact-form");
+const formStatus = document.getElementById("formStatus");
+const submitBtn = contactForm.querySelector('button[type="submit"]');
 
 const translations = {
   en: {
@@ -59,6 +62,11 @@ logic_category: "LOGIC",
 frontend_category: "FRONT-END",
 backend_category: "BACK-END",
 ai_category: "AI",
+
+skip_link: "Skip to main content",
+form_sending: "Sending...",
+form_success: "Message sent! I'll get back to you soon.",
+form_error: "Something went wrong. Please try again.",
 
   },
 
@@ -120,6 +128,11 @@ frontend_category: "FRONT-END",
 backend_category: "BACK-END",
 ai_category: "IA",
 
+skip_link: "Pular para o conteúdo principal",
+form_sending: "Enviando...",
+form_success: "Mensagem enviada! Responderei em breve.",
+form_error: "Algo correu mal. Por favor, tente novamente.",
+
   },
 };
 
@@ -172,6 +185,35 @@ languageToggle.addEventListener("click", () => {
   applyLanguage(currentLanguage);
 });
 
+contactForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const originalText = submitBtn.textContent;
+  submitBtn.textContent = translations[currentLanguage].form_sending;
+  submitBtn.disabled = true;
+  formStatus.textContent = "";
+  formStatus.className = "form-status";
+  try {
+    const res = await fetch(contactForm.action, {
+      method: "POST",
+      body: new FormData(contactForm),
+      headers: { Accept: "application/json" },
+    });
+    if (res.ok) {
+      contactForm.reset();
+      formStatus.textContent = translations[currentLanguage].form_success;
+      formStatus.classList.add("success");
+    } else {
+      formStatus.textContent = translations[currentLanguage].form_error;
+      formStatus.classList.add("error");
+    }
+  } catch {
+    formStatus.textContent = translations[currentLanguage].form_error;
+    formStatus.classList.add("error");
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalText;
+  }
+});
 
 applyTheme(currentTheme);
 applyLanguage(currentLanguage);
