@@ -158,6 +158,7 @@ function applyLanguage(language) {
   languageLabel.textContent = language === "en" ? "PT" : "EN";
 
   localStorage.setItem("language", language);
+  document.documentElement.lang = language;
 }
 
 themeToggle.addEventListener("click", () => {
