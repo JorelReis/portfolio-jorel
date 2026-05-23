@@ -1,101 +1,82 @@
 # Jorel Reis | Developer Portfolio
 
-![Portfolio Preview](assets/readme/preview-home.png)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-blue?style=flat)
 
-## 📌 About the Project
+> Personal portfolio showcasing projects, skills and certificates — built with pure HTML, CSS and JavaScript, no frameworks.
 
-This is my personal developer portfolio, created to present my projects, skills, certificates, professional journey and contact information in a clean and modern way.
+**Live → [jorelreis.com](https://www.jorelreis.com)**
 
-The main goal of this project is to build a professional online presence as a developer while practicing front-end fundamentals with **HTML, CSS and JavaScript**.
-
-The portfolio was designed based on a Figma layout reference and developed step by step in VS Code, with version control using Git and GitHub.
-
-This project is still under development and will continue to receive improvements in responsiveness, accessibility, animations, content and deployment.
-
----
-
-## 🚀 Project Preview
-
-### Home Section
-
-![Home Section](assets/readme/preview-home.png)
-
-### Featured Projects
-
-![Projects Section](assets/readme/preview-projects.png)
-
-### About Me
-
-![About Section](assets/readme/preview-about.png)
-
-### Certificates
-
-![Certificates Section](assets/readme/preview-certificates.png)
-
-### Contact
-
-![Contact Section](assets/readme/preview-contact.png)
+![Portfolio Preview](assets/images/og-preview.png)
 
 ---
 
-## 🛠️ Technologies Used
+## About
 
-This project was built using:
-
-- HTML5
-- CSS3
-- JavaScript
-- Git
-- GitHub
-- Figma
-- Formspree
+Personal portfolio of Jorel Reis, junior web developer based in Portugal. Built from scratch with no frameworks — every line of HTML, CSS and JavaScript is hand-written and audited for accessibility (WCAG AA). The codebase is intentionally framework-free to demonstrate fundamentals.
 
 ---
 
-## ✨ Features
+## Features
 
-- Modern and clean portfolio layout
-- Dark and light mode toggle
-- Portuguese and English language switch
-- Fixed navigation bar
-- Personal introduction section
-- Featured projects section
-- About me section
-- Certificates section with PDF links
-- Contact form connected with Formspree
-- Links to LinkedIn and GitHub
-- Custom colors and typography
-- Responsive layout in progress
-- Organized project structure
+| Feature | Detail |
+|---|---|
+| Bilingual | English / Portuguese toggle, preference saved via `localStorage` |
+| Dark / Light mode | Theme toggle, preference saved via `localStorage` |
+| Accessibility | WCAG AA — skip link, `aria-*` attributes, semantic HTML, `lang` updates dynamically on language switch |
+| Social previews | Open Graph and Twitter Card meta tags, validated via LinkedIn Post Inspector |
+| Optimized assets | Hero image converted to WebP (75% smaller, 2.79 MB → 691 KB), with `fetchpriority="high"` and explicit dimensions to prevent layout shift |
+| Contact form | Async submission via Formspree with loading, success and error states |
+| Lazy loading | Below-fold images load on demand (`loading="lazy"`) |
+| Responsive | Mobile and desktop layouts |
 
 ---
 
-## 📂 Project Structure
+## Tech Stack
 
-```bash
+- **HTML5** — semantic structure, accessibility attributes
+- **CSS3** — custom properties, no external frameworks
+- **Vanilla JavaScript** — i18n system, theme toggle, async form submission
+- **Formspree** — contact form backend
+- **Vercel** — hosting and deployment
+
+---
+
+## Performance
+
+Lighthouse scores:
+
+| Device  | Performance | Accessibility | Best Practices | SEO |
+|---------|:-----------:|:-------------:|:--------------:|:---:|
+| Desktop | 98          | 100           | 100            | 100 |
+| Mobile  | 68          | 100           | 100            | 100 |
+
+LCP optimized: hero image served as WebP (691 KB vs 2.79 MB original PNG) with `fetchpriority="high"` and explicit `width`/`height` to prevent layout shift (CLS).
+
+---
+
+## Project Structure
+
+```
 portfolio-jorel/
-│
 ├── assets/
-│   │
 │   ├── images/
-│   │   ├── jorel-photo.png
+│   │   ├── jorel-photo.webp
 │   │   ├── shopee-cart.png
 │   │   ├── ai-chat.png
-│   │   └── pokedex.png
-│   │
-│   ├── readme/
-│   │   ├── preview-home.png
-│   │   ├── preview-projects.png
-│   │   ├── preview-about.png
-│   │   ├── preview-certificates.png
-│   │   └── preview-contact.png
-│   │
-│   └── certificates/
-│       ├── ai/
-│       ├── back-end/
-│       ├── front-end/
-│       └── logic/
-│
+│   │   ├── pokedex.png
+│   │   └── og-preview.png
+│   ├── certificates/
+│   │   ├── ai/
+│   │   ├── back-end/
+│   │   ├── front-end/
+│   │   └── logic/
+│   ├── favicon.ico
+│   ├── favicon.png
+│   └── apple-touch-icon.png
 ├── index.html
 ├── style.css
 ├── script.js
@@ -104,145 +85,26 @@ portfolio-jorel/
 
 ---
 
-## 💻 How to Run Locally
-
-To run this project on your computer:
-
-1. Clone the repository:
+## Running Locally
 
 ```bash
 git clone https://github.com/JorelReis/portfolio-jorel.git
-```
-
-2. Open the project folder:
-
-```bash
 cd portfolio-jorel
 ```
 
-3. Open the project in VS Code:
+Open `index.html` in your browser, or use the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension in VS Code for hot reload.
 
-```bash
-code .
-```
-
-4. Open the `index.html` file in your browser.
-
-For a better development experience, you can use the **Live Server** extension in VS Code.
+No build step, no dependencies.
 
 ---
 
-## 🌗 Theme Toggle
+## Contact
 
-The portfolio includes a dark/light mode toggle built with JavaScript.
-
-The selected theme is saved in the browser using `localStorage`, so the user's preference remains active even after refreshing the page.
-
----
-
-## 🌍 Language Switch
-
-The site includes a Portuguese/English language switch.
-
-The translation system was built manually using JavaScript objects and `data-i18n` attributes in the HTML.
-
-This allows the page content to change dynamically without reloading the website.
+- LinkedIn: [linkedin.com/in/jorelreis](https://www.linkedin.com/in/jorelreis/)
+- Email: jorelreis@icloud.com
 
 ---
 
-## 📜 Certificates Section
+## License
 
-The portfolio includes a certificates section organized by category:
-
-- Logic
-- Front-End
-- Back-End
-- AI
-
-Each certificate is displayed as a clickable link that opens the corresponding PDF file in a new browser tab.
-
----
-
-## 📬 Contact Form
-
-The contact form is connected with **Formspree**, allowing visitors to send messages directly through the portfolio website.
-
-The form includes:
-
-- Name
-- Email
-- Subject
-- Message
-
----
-
-## 📸 Featured Projects
-
-The portfolio currently highlights some of my main development projects:
-
-### Shopping Cart & Checkout System
-
-A full-stack shopping cart application built to simulate an online store experience, including product listing, cart management, item quantity control and checkout flow.
-
-### AI Chat Application
-
-An AI-powered chat application that allows users to send questions and receive dynamic responses through an OpenAI API integration, using a modular frontend and backend structure.
-
-### Pokedex Web App
-
-A responsive front-end application that consumes the PokéAPI to display Pokémon data, including images, types, stats, pagination and search by name or ID.
-
----
-
-## 📚 What I Learned
-
-During the development of this project, I practiced:
-
-- Structuring a web page with semantic HTML
-- Styling layouts with CSS
-- Creating reusable sections
-- Working with colors, typography and spacing
-- Building a dark/light mode toggle
-- Creating a simple translation system with JavaScript
-- Organizing certificates and assets
-- Connecting a contact form with Formspree
-- Using Git and GitHub for version control
-- Building a professional portfolio from a Figma design reference
-
----
-
-## 🔄 Future Improvements
-
-Some improvements planned for the next versions:
-
-- Improve mobile responsiveness
-- Add smooth scroll animations
-- Improve accessibility
-- Add real live demo links for each project
-- Add a downloadable resume
-- Refine project descriptions
-- Improve contact form feedback
-- Publish the website with a custom domain
-
----
-
-## 🌐 Deployment
-
-The project is currently under development.
-
-A live version will be published soon with a custom professional domain.
-
----
-
-## 👨‍💻 Author
-
-**Jorel Reis**
-
-- GitHub: [@JorelReis](https://github.com/JorelReis)
-- LinkedIn: [Jorel Reis](https://www.linkedin.com/in/jorelreis/)
-
----
-
-## 📄 License
-
-This project is open for study and portfolio purposes.
+MIT
