@@ -134,6 +134,7 @@ function applyTheme(theme) {
   }
 
   localStorage.setItem("theme", theme);
+  themeToggle.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
 }
 
 function applyLanguage(language) {
